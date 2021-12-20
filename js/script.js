@@ -1,19 +1,25 @@
 // definisco la funzione del creare le box
 function createBox(boxContainer, number) {
+    // codice per la creazione dei div
     const boxHtml = document.createElement('div');
     boxHtml.className = 'ms_box';
-
     boxContainer.append(boxHtml);
     
-    boxHtml.addEventListener('click', function() { 
-
+    // click delle singole box
+    boxHtml.addEventListener('click', function() {
+        
+        // codice bombe + alert e refresh della pagina
         if (array.includes(number)) {
             this.classList.add('ms_color-bomb');
-            this.classList.remove('ms_color'); 
+            this.classList.remove('ms_color');
+
+            //conteggio delle box giuste che si visualizza a fine partita  
             let result = document.querySelectorAll('.ms_color').length;
             alert(`GAME OVER - RISULTATO: ${result}`);
             location.reload();
-        } else {
+        }
+        // codice box giuste 
+        else {
             this.classList.add('ms_color');
         }
     })
@@ -49,9 +55,7 @@ function bombNum (max) {
             array.push(number);
         }
     }
-
     console.log(array);
-
 }
 
 // --------------------------------------------------------------------------
