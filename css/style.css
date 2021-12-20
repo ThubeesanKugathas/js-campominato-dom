@@ -1,0 +1,36 @@
+/* non porre dimensioni al container poichè con i bottoni definisco le stesse */
+.ms_box-container {
+    margin: 0 auto;
+}
+
+/* container per griglia 10x10 */
+.ms_box-container.ms_container-1{
+    width: 1000px;
+    height: 1000px;
+}
+
+/* container per griglia 9x9 */
+.ms_box-container.ms_container-2{
+    width: 900px;
+    height: 900px;
+}
+
+/* container per griglia 7x7 */
+.ms_box-container.ms_container-3{
+    width: 700px;
+    height: 700px;
+}
+
+.ms_box {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+}
+
+.ms_box.ms_color {
+    background-color: cyan;
+}
+
+.ms_box.ms_color-bomb {
+    background-color: red;
+}
