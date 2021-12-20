@@ -5,6 +5,7 @@ function createBox(boxContainer, number) {
     boxHtml.className = 'ms_box';
     boxContainer.append(boxHtml);
     
+    let result = 0;
     // click delle singole box
     boxHtml.addEventListener('click', function() {
         
@@ -14,8 +15,12 @@ function createBox(boxContainer, number) {
             this.classList.remove('ms_color');
 
             //conteggio delle box giuste che si visualizza a fine partita  
-            let result = document.querySelectorAll('.ms_color').length;
+            result = document.querySelectorAll('.ms_color').length;
             alert(`GAME OVER - RISULTATO: ${result}`);
+            location.reload();
+        }
+        else if (result === number - array.includes(number)) {
+            alert('COMPLIMENTI HAI VINTO');
             location.reload();
         }
         // codice box giuste 
