@@ -1,23 +1,29 @@
 // definisco la funzione del creare le box
-function createBox(boxContainer) {
+function createBox(boxContainer, number) {
     const boxHtml = document.createElement('div');
     boxHtml.className = 'ms_box';
 
     boxContainer.append(boxHtml);
-
-    boxHtml.addEventListener('click', function() { 
-        this.classList.add('ms_color');
-    })
     
+    boxHtml.addEventListener('click', function() { 
+
+        if (array.includes(number)) {
+            this.classList.add('ms_color-bomb');
+            this.classList.remove('ms_color'); 
+            let result = document.querySelectorAll('.ms_color').length;
+            alert(`GAME OVER - RISULTATO: ${result}`);
+        } else {
+            this.classList.add('ms_color');
+        }
+    })
 }
 
 
 // funzione per definire dimensioni griglia
 function boxNumber(maxNum){
-    for (let i = 0; i < maxNum; i++) {
-        const newBox = createBox(containerHtml);
+    for (let i = 1; i <= maxNum; i++) {
+        const newBox = createBox(containerHtml, i);
     }
-
     // per utilizzare una funzione che sfrutti lo stesso numero dedicato ai box, inserisco la funzione 
     // dentro l'altra
     bombNum(maxNum);
