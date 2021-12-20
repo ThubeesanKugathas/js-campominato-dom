@@ -1,5 +1,5 @@
 // definisco la funzione del creare le box
-function createBox(boxContainer, number) {
+function createBox(boxContainer, number, maxLenght) {
     // codice per la creazione dei div
     const boxHtml = document.createElement('div');
     boxHtml.className = 'ms_box';
@@ -19,10 +19,11 @@ function createBox(boxContainer, number) {
             alert(`GAME OVER - RISULTATO: ${result}`);
             location.reload();
         }
-        else if (result === number - array.includes(number)) {
-            alert('COMPLIMENTI HAI VINTO');
-            location.reload();
-        }
+        // TODO!
+        // else if (result) {
+        //     alert('COMPLIMENTI HAI VINTO');
+        //     location.reload();
+        // }
         // codice box giuste 
         else {
             this.classList.add('ms_color');
@@ -34,7 +35,7 @@ function createBox(boxContainer, number) {
 // funzione per definire dimensioni griglia
 function boxNumber(maxNum){
     for (let i = 1; i <= maxNum; i++) {
-        const newBox = createBox(containerHtml, i);
+        const newBox = createBox(containerHtml, i, maxNum);
     }
     // per utilizzare una funzione che sfrutti lo stesso numero dedicato ai box, inserisco la funzione 
     // dentro l'altra
