@@ -40,8 +40,6 @@ function bombNum (max) {
         }
     }
 
-    return array;
-
 }
 
 // definisco l'output del div container
