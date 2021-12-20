@@ -12,6 +12,7 @@ function createBox(boxContainer, number) {
             this.classList.remove('ms_color'); 
             let result = document.querySelectorAll('.ms_color').length;
             alert(`GAME OVER - RISULTATO: ${result}`);
+            location.reload();
         } else {
             this.classList.add('ms_color');
         }
