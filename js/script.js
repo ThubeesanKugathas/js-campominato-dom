@@ -8,6 +8,7 @@ function createBox(boxContainer) {
     boxHtml.addEventListener('click', function() {
         this.classList.add('ms_color');
     })
+
 }
 
 // funzione per definire dimensioni griglia
@@ -18,7 +19,7 @@ function boxNumber(maxNum){
 
     // per utilizzare una funzione che sfrutti lo stesso numero dedicato ai box, inserisco la funzione 
     // dentro l'altra
-    randomizerNum(maxNum);
+    bombNum(maxNum);
 }
 
 // funzione per la generazione di numeri random
@@ -28,7 +29,7 @@ function randomNumber(min, max) {
 }
 
 // funzione per generare tot numeri a seconda nel numero dei box in griglia
-function randomizerNum (max) {
+function bombNum (max) {
 
     let array = [];
     
@@ -39,8 +40,8 @@ function randomizerNum (max) {
         }
     }
 
-    console.log(array);
     return array;
+
 }
 
 // definisco l'output del div container
