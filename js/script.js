@@ -18,14 +18,14 @@ function createBox(boxContainer, number, maxLenght) {
             alert(`GAME OVER - RISULTATO: ${result}`);
             location.reload();
         }
-        // TODO!
-        else if (document.querySelectorAll('.ms_color').length === maxLenght - array.length) {
-            alert('COMPLIMENTI HAI VINTO');
-            location.reload();
-        }
         // codice box giuste 
         else {
             this.classList.add('ms_color');
+            result++;
+            if (result === maxLenght - 16) {
+                alert(`HAI VINTO! - RISULTATO: ${result}`);
+                location.reload();
+            }
         }
     })
 }
