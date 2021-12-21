@@ -8,7 +8,6 @@ function createBox(boxContainer, number, maxLenght) {
     let result = 0;
     // click delle singole box
     boxHtml.addEventListener('click', function() {
-        
         // codice bombe + alert e refresh della pagina
         if (array.includes(number)) {
             this.classList.add('ms_color-bomb');
@@ -20,10 +19,10 @@ function createBox(boxContainer, number, maxLenght) {
             location.reload();
         }
         // TODO!
-        // else if (result) {
-        //     alert('COMPLIMENTI HAI VINTO');
-        //     location.reload();
-        // }
+        else if (document.querySelectorAll('.ms_color').length === maxLenght - array.length) {
+            alert('COMPLIMENTI HAI VINTO');
+            location.reload();
+        }
         // codice box giuste 
         else {
             this.classList.add('ms_color');
